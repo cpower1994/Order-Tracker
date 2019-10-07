@@ -15,6 +15,7 @@ export class OrderItemComponent {
   orderObject = {
     customer_first_name: '',
     customer_last_name: '',
+    deliver_by: '',
     items: [],
   };
 
@@ -23,8 +24,12 @@ export class OrderItemComponent {
   submitOrder() {
     this.orderObject.customer_first_name = this.firstName;
     this.orderObject.customer_last_name = this.lastName;
-    console.log(this.orderObject);
+    const today = new Date();
+    this.orderObject.deliver_by = (today.getUTCMonth() + 1) + '/' + (today.getDate() + 2) + '/' + today.getUTCFullYear();
 
-    this.orderService.placeOrders(this.orderObject);
+    this.orderService.placeOrders(this.orderObject)
+      .subscribe(res => {
+        console.log(res);
+      });
   }
 }

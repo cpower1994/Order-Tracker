@@ -1,11 +1,15 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Order} from './order';
 
 @Injectable({providedIn: 'root'})
 export class OrdersService {
   private orderUrl = 'http://localhost:3000/orders';
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  };
+
 
   constructor(private http: HttpClient) {}
 

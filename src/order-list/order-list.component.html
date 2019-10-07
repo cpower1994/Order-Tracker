@@ -9,7 +9,7 @@
 
   <mat-list class="order-list" role="list">
     <mat-list-item role="listitem" *ngFor="let order of orders">
-      <span class="order-item" *ngFor="let item of order.items">{{item.product_name}}</span>
+      {{order.items[0]}}
     </mat-list-item>
   </mat-list>
 

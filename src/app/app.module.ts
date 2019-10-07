@@ -16,6 +16,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {OrderListComponent} from '../order-list/order-list.component';
 import {MatListModule} from '@angular/material/list';
 import {HttpClientModule} from '@angular/common/http';
+import {AppRoutingModule} from './app.routing.module';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import {HttpClientModule} from '@angular/common/http';
     ReactiveFormsModule,
     MatListModule,
     HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent]

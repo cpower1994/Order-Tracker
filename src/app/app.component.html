@@ -1,6 +1,11 @@
-<mat-toolbar class="toolbar">Order Tracker</mat-toolbar>
-<order-item
-  [firstName]="firstName"
-  [lastName]="lastName"
-></order-item>
+<mat-toolbar class="toolbar">
+  <span class="navTitle">Order Tracker</span>
+  <span class="navItem"><a routerLink="/newOrder">Order Item</a></span>
+  <span class="navItem"><a routerLink="/orderList">Order History</a></span>
+</mat-toolbar>
+<router-outlet></router-outlet>
+<!--<order-item-->
+<!--  [firstName]="firstName"-->
+<!--  [lastName]="lastName"-->
+<!--&gt;</order-item>-->
 <!--<order-list></order-list>-->

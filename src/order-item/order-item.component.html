@@ -9,7 +9,8 @@
     <h2 class="order-header">Order Item</h2>
     <div class="order-container">
       <mat-form-field class="half-width">
-        <input #itemName matInput placeholder="Item" (input)="this.orderObject.items[0] = itemName.value" >
+        <input #itemName matInput placeholder="Item" [formControl]="itemControl" (input)="this.orderObject.items[0] = itemName.value" required>
+        <mat-error *ngIf="itemControl">Please enter an item name</mat-error>
       </mat-form-field>
 
       <button mat-raised-button (click)="submitOrder()">Submit</button>

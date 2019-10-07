@@ -22,7 +22,10 @@ export class OrderListComponent implements OnInit {
 
   getOrders(): void {
     this.orderService.getOrders()
-      .subscribe(orders => this.orders = orders);
+      .subscribe(orders => {
+        this.orders = orders;
+        console.log(this.orders);
+      });
   }
 }
 

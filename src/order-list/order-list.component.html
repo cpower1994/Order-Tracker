@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h2 class="order-header">Order List</h2>
+
+  <mat-list class="order-list" role="list">
+    <mat-list-item role="listitem" *ngFor="let order of orders">
+      <span class="order-item" *ngFor="let item of order.items">{{item.product_name}}</span>
+    </mat-list-item>
+  </mat-list>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Item</title>
+</head>
+<body>
+  <div>
+    <h2 class="order-header">Order Item</h2>
+    <div class="order-container">
+      <mat-form-field class="half-width">
+        <input #itemName matInput placeholder="Item" (input)="this.orderObject.items[0] = itemName.value" >
+      </mat-form-field>
+
+      <button mat-raised-button (click)="submitOrder()">Submit</button>
+
+    </div>
+  </div>
+</body>
+</html>

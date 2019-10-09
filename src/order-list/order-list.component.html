@@ -8,8 +8,9 @@
   <h2 class="order-header">Order List</h2>
 
   <mat-list class="order-list" role="list">
-    <mat-list-item role="listitem" *ngFor="let order of orders">
-      {{order.items[0]}}
+    <mat-list-item class="order-item" role="listitem" *ngFor="let order of orders">
+      Items: {{order.items[0]}} <br> <br>
+      Deliver by: {{order.deliver_by}}
     </mat-list-item>
   </mat-list>
 

@@ -1,11 +1,11 @@
 .order-list {
   margin-left: 2%;
+  display: inline-flex;
 }
 
 .order-item {
-  padding-right: .5%;
-}
-
-.order-delivery {
-  float: right;
+  padding: 6% !important;
+  margin-right: 4% !important;
+  border-radius: 5px;
+  box-shadow: 0 0 5px;
 }

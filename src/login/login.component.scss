@@ -1,0 +1,19 @@
+.container {
+  //align-items: center;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 14% auto;
+  box-shadow: -1px 3px 5px gray;
+  padding: 20px;
+  //border: solid gray 1px;
+  border-radius: 5px;
+}
+
+.login > * {
+  width: 100%;
+}
+

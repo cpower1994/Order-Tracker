@@ -17,13 +17,15 @@ import {OrderListComponent} from '../order-list/order-list.component';
 import {MatListModule} from '@angular/material/list';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app.routing.module';
+import {LoginComponent} from '../login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     OrderItemComponent,
-    OrderListComponent
+    OrderListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
